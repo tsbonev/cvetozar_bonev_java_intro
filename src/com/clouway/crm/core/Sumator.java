@@ -17,10 +17,22 @@ public class Sumator {
         return a + b;
     }
 
+    /**
+     * Sums two big integers
+     * @param a first bigint to sum
+     * @param b second bigint to sum
+     * @return sum of the big integers
+     */
     public BigInteger sum(BigInteger a, BigInteger b){
         return a.add(b);
     }
 
+    /**
+     * Sums two big decimal
+     * @param a first bigdec to sum
+     * @param b second bigdec to sum
+     * @return sum of the big decimals
+     */
     public BigDecimal sum(BigDecimal a, BigDecimal b){
         return a.add(b);
     }
