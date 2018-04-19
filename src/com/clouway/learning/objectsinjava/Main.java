@@ -3,6 +3,7 @@ package com.clouway.learning.objectsinjava;
 import com.clouway.crm.core.Store.Clerk;
 import com.clouway.crm.core.Store.Worker;
 import com.clouway.crm.core.Sumator;
+import com.clouway.crm.core.SumatorExceptions;
 import com.clouway.crm.core.Tree.HeterogeneousTree;
 import com.clouway.crm.core.Tree.HomogeneousTree;
 
@@ -13,6 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        /*
         Sumator sumator = new Sumator();
 
         System.out.println(sumator.sum(2, 2));
@@ -24,6 +26,8 @@ public class Main {
         BigDecimal bigDecA = new BigDecimal("93.423421424636361241");
         BigDecimal bigDecB = new BigDecimal("1241.635537476475457");
         System.out.println(sumator.sum(bigDecA, bigDecB));
+        */
+
 
         /*
         HomogenousTree tree = new HomogenousTree();
@@ -43,6 +47,7 @@ public class Main {
         tree.printElements("post-order");
         */
 
+        /*
         HeterogeneousTree tree = new HeterogeneousTree();
         tree.add(new Worker());
         tree.add(new Clerk());
@@ -55,6 +60,14 @@ public class Main {
         tree.printElements("in-order");
         System.out.println("---");
         tree.printElements("post-order");
+        */
+
+        SumatorExceptions sumator = new SumatorExceptions();
+
+        System.out.println(sumator.sum("2131", "1341412"));
+        System.out.println(sumator.sum("21gr2", "412g")); //NumberFormat
+        System.out.println(sumator.sum("213176756435364737", "1341412125454634636774623")); //NumberFormat
+        System.out.println(sumator.sum(null, null));
 
 
     }
