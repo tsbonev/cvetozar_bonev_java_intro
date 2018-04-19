@@ -1,5 +1,7 @@
 package com.clouway.learning.objectsinjava;
 
+import com.clouway.ExceptionList;
+import com.clouway.crm.core.OutOfRangeException;
 import com.clouway.crm.core.Store.Clerk;
 import com.clouway.crm.core.Store.Worker;
 import com.clouway.crm.core.Sumator;
@@ -8,7 +10,9 @@ import com.clouway.crm.core.Tree.HeterogeneousTree;
 import com.clouway.crm.core.Tree.HomogeneousTree;
 
 import java.math.BigDecimal;
+import java.util.*;
 import java.math.BigInteger;
+import java.util.concurrent.ExecutionException;
 
 public class Main {
 
@@ -62,12 +66,38 @@ public class Main {
         tree.printElements("post-order");
         */
 
+
         SumatorExceptions sumator = new SumatorExceptions();
 
         System.out.println(sumator.sum("2131", "1341412"));
         System.out.println(sumator.sum("21gr2", "412g")); //NumberFormat
         System.out.println(sumator.sum("213176756435364737", "1341412125454634636774623")); //NumberFormat
-        System.out.println(sumator.sum(null, null));
+        System.out.println(sumator.sum(null, null)); //NumberFormat
+        System.out.println("-----------");
+
+        /*
+        Scanner sc = new Scanner(System.in);
+        try{
+            int a = Integer.parseInt(sc.next());
+            if(a < 0 || a > 10){
+                throw new OutOfRangeException("Number not in range");
+            }
+
+        }
+        catch (NumberFormatException e){
+            System.out.println("Caught exception: " + e);
+        }
+        catch (OutOfRangeException e){
+            System.out.println("Caught exception: " + e);
+        }
+        */
+
+        ExceptionList list = new ExceptionList();
+        list.Add("1");
+        list.Add("2");
+        list.printAllElements();
+        list.Remove();
+        list.Remove();
 
 
     }
