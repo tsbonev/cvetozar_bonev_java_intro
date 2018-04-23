@@ -51,10 +51,10 @@ public class StreamReverser {
             //catch when file is empty and end
         }
         catch (FileNotFoundException e){
-            System.out.println("No such file!");
+            System.err.println("No such file!");
         }
         catch (IOException e){
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
 
     }

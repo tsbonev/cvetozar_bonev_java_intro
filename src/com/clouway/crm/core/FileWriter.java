@@ -24,9 +24,9 @@ public class FileWriter {
             this.path = Paths.get(filename);
             Files.createFile(path);
         } catch (FileAlreadyExistsException e) {
-            System.out.println("File already exist!");
+            System.err.println("File already exist!");
         } catch (IOException e) {
-            System.out.println("Insufficient permissions!");
+            System.err.println("Insufficient permissions!");
         }
     }
 
@@ -56,7 +56,7 @@ public class FileWriter {
             }while(line[line.length - 1] != '.');
 
         }catch(IOException e){
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
 
     }

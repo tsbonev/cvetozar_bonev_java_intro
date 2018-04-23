@@ -33,6 +33,7 @@ public class Main {
         reverser1.reverse();
         */
 
+        /*
         TransferObject transferer = new TransferObject();
 
         try (InputStream in = new FileInputStream("input");
@@ -47,6 +48,29 @@ public class Main {
         catch (IOException e){
             System.out.println(e.getMessage());
         }
+        */
+
+        DataClass dataClass = new DataClass();
+
+        try{
+            RandomSerializable obj = new RandomSerializable(123, "Obj");
+            InputStream in = new FileInputStream("serialize");
+            OutputStream out = new FileOutputStream("serialize");
+            dataClass.saveObject(out, obj);
+
+            RandomSerializable getObject = (RandomSerializable) dataClass.getObject(in);
+
+            System.out.println(getObject.name);
+            System.out.println(getObject.index);
+
+        }
+        catch (FileNotFoundException e){
+            System.err.println(e.getMessage());
+        }
+        catch (IOException e){
+            System.err.println(e.getMessage());
+        }
+
 
 
     }

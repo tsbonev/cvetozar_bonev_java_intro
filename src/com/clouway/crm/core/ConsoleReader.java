@@ -24,7 +24,7 @@ public class ConsoleReader {
             return Integer.parseInt(in.nextLine());
         }
         catch (NumberFormatException e){
-            System.out.println("Not a correct integer!");
+            System.err.println("Not a correct integer!");
         }
         finally {
             return res;
@@ -58,7 +58,7 @@ public class ConsoleReader {
             res = Float.parseFloat(in.nextLine());
         }
         catch (NumberFormatException e){
-            System.out.println("Not a correct float!");
+            System.err.println("Not a correct float!");
         }
         finally{
             return res;
