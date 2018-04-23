@@ -23,7 +23,11 @@ public class Main {
         writer.writeToFile();
         */
 
+        StreamReverser reverser = new StreamReverser("test");
+        reverser.reverse();
 
+        StreamReverser reverser1 = new StreamReverser("test1");
+        reverser1.reverse();
 
 
     }
