@@ -50,6 +50,8 @@ public class Main {
         }
         */
 
+
+        /*
         DataClass dataClass = new DataClass();
 
         try{
@@ -70,6 +72,15 @@ public class Main {
         catch (IOException e){
             System.err.println(e.getMessage());
         }
+        */
+
+        DirectoryBrowser browser = new DirectoryBrowser();
+
+        browser.listContent("input");
+        System.out.println();
+        browser.listContent("/home/clouway/workspaces/idea/input-and-output");
+        System.out.println();
+        browser.listContent("home/fakedir");
 
 
 
