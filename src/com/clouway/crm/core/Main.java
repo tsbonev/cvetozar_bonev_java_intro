@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        /*
         ConsoleReader reader = new ConsoleReader();
 
         int a = reader.readInt();
@@ -15,6 +16,14 @@ public class Main {
         System.out.println(b);
         System.out.println(c);
         System.out.println(d);
+        */
+
+        /*
+        FileWriter writer = new FileWriter("test1");
+        writer.writeToFile();
+        */
+
+
 
 
     }
