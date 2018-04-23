@@ -31,7 +31,7 @@ public class StreamReverser {
     }
 
     /**
-     * Reverses the lines of a given file and writes them to a 
+     * Reverses the lines of a given file and writes them to a
      */
     public void reverse() {
 

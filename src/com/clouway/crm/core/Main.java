@@ -1,5 +1,7 @@
 package com.clouway.crm.core;
 
+import java.io.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -23,11 +25,28 @@ public class Main {
         writer.writeToFile();
         */
 
+        /*
         StreamReverser reverser = new StreamReverser("test");
         reverser.reverse();
 
         StreamReverser reverser1 = new StreamReverser("test1");
         reverser1.reverse();
+        */
+
+        TransferObject transferer = new TransferObject();
+
+        try (InputStream in = new FileInputStream("input");
+             OutputStream out = new FileOutputStream("output")){
+
+            transferer.transfer(in, out, 2, 4);
+
+        }
+        catch (FileNotFoundException e){
+            System.out.println("No such file!");
+        }
+        catch (IOException e){
+            System.out.println(e.getMessage());
+        }
 
 
     }
