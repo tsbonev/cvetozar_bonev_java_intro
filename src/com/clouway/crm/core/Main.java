@@ -2,6 +2,7 @@ package com.clouway.crm.core;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -18,45 +19,49 @@ public class Main {
 
         PageBean<Integer> pageBean = new PageBean<>(list, 3);
 
-        pageBean.next().stream().forEach(c -> System.out.print(c + " ")); //First
-        System.out.println("Current page is: " + pageBean.getCurrentPage());
+        pageBean.firstPage().forEach(c -> System.out.print(c + " "));
+        System.out.println();
 
-        pageBean.next().stream().forEach(c -> System.out.print(c + " ")); //Second
-        System.out.println("Current page is: " + pageBean.getCurrentPage());
+        Scanner in = new Scanner (System.in);
+        while(true){
+            String command = in.nextLine();
 
-        pageBean.next().stream().forEach(c -> System.out.print(c + " ")); //Third
-        System.out.println("Current page is: " + pageBean.getCurrentPage());
+            switch(command){
 
-        pageBean.next().stream().forEach(c -> System.out.print(c + " ")); // Fourth
-        System.out.println("Current page is: " + pageBean.getCurrentPage());
+                case "next":
+                    pageBean.next().stream().forEach(c -> System.out.print(c + " "));
+                    System.out.println();
+                    break;
+                case "previous":
+                    try{
+                        pageBean.previous().stream().forEach(c -> System.out.print(c + " "));
+                    }catch (ArrayIndexOutOfBoundsException e){
+                        System.err.print(e.getMessage());
+                    }
+                    System.out.println();
+                    break;
+                case "has next":
+                    System.out.println("There is a next page: " + pageBean.hasNext());
+                    break;
+                case "has previous":
+                    System.out.println("There is a previous page: " + pageBean.hasPrevious());
+                    break;
+                case "current page":
+                    System.out.println("Current page is: " + pageBean.getCurrentPage());
+                    break;
+                case "first page":
+                    pageBean.firstPage().stream().forEach(c -> System.out.print(c + " "));
+                    System.out.println();
+                    break;
+                case "last page":
+                    pageBean.lastPage().stream().forEach(c -> System.out.print(c + " ")); //First
+                    System.out.println();
+                    break;
+                default:
+                    break;
+            }
 
-        System.out.println("Has next page: " + pageBean.hasNext()); //Doesn't have a next
-
-        pageBean.next().stream().forEach(c -> System.out.print(c + " ")); // Try to go to fifth
-        System.out.println("Current page is: " + pageBean.getCurrentPage());
-
-
-
-        pageBean.previous().stream().forEach(c -> System.out.print(c + " ")); //Go back to third
-        System.out.println("Current page is: " + pageBean.getCurrentPage());
-
-        pageBean.previous().stream().forEach(c -> System.out.print(c + " ")); //Go back to second
-        System.out.println("Current page is: " + pageBean.getCurrentPage());
-
-        pageBean.previous().stream().forEach(c -> System.out.print(c + " ")); //Go back to first
-        System.out.println("Current page is: " + pageBean.getCurrentPage());
-
-        System.out.println("Has previous page: " + pageBean.hasPrevious()); //Doesn't have a previous
-
-        pageBean.previous().stream().forEach(c -> System.out.print(c + " ")); //Try to go back from first
-        System.out.println("Current page is: " + pageBean.getCurrentPage());
-
-        pageBean.lastPage().stream().forEach(c -> System.out.print(c + " ")); //Go to last
-        System.out.println("Current page is: " + pageBean.getCurrentPage());
-
-        pageBean.firstPage().stream().forEach(c -> System.out.print(c + " ")); //Go to first
-        System.out.println("Current page is: " + pageBean.getCurrentPage());
-
+        }
 
         //endregion
 

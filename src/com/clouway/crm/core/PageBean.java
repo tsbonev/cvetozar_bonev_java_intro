@@ -24,8 +24,7 @@ public class PageBean<T> {
     private List<T> getPage(int pageIndex){
 
         if(pageIndex == 0){
-           System.err.println("There is no previous page!"); //WIP, throw an Exception here
-           return null;
+           throw new ArrayIndexOutOfBoundsException("There is no previous page!");
         }
 
         if(pageIndex > pageNum) pageIndex--; //try to get the next of the last
