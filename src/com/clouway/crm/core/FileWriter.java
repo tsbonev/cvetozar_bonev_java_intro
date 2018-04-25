@@ -15,6 +15,7 @@ public class FileWriter {
 
     /**
      * Constructs a FileWriter class with a path to a file
+     *
      * @param filename name of file to be created
      */
     public FileWriter(String filename){
@@ -32,6 +33,7 @@ public class FileWriter {
 
     /**
      * Reads a line from the console
+     *
      * @return the string read from the console
      */
     private String readLine() {

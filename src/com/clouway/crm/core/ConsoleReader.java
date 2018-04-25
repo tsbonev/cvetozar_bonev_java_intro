@@ -16,6 +16,7 @@ public class ConsoleReader {
 
     /**
      * Reads a line and parses it into a string, then returns it
+     *
      * @return integer to return
      */
     public int readInt(){
@@ -42,6 +43,7 @@ public class ConsoleReader {
 
     /**
      * Reads a line and takes out the firts char, then returns it
+     *
      * @return char to be returned
      */
     public char readChar(){
@@ -50,6 +52,7 @@ public class ConsoleReader {
 
     /**
      * Reads a line and parses it to a float, then returns it
+     *
      * @return float to be returned
      */
     public float readFloat(){

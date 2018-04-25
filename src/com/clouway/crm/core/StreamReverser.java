@@ -17,6 +17,7 @@ public class StreamReverser {
 
     /**
      * Constructs a StreamReverser class with a given path
+     *
      * @param pathname the path to point to
      */
     public StreamReverser(String pathname) {

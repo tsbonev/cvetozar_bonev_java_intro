@@ -4,6 +4,11 @@ import java.io.*;
 
 public class DirectoryBrowser {
 
+    /**
+     * Prints the files
+     *
+     * @param path the path whose files to print
+     */
     public void listContent(String path) {
 
         File file = new File(path);
