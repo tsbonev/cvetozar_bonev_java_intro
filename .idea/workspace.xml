@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2555c82-f6ba-401a-b1bc-cb0ebe9a8a00" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/input-and-output/com/clouway/crm/core/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/input-and-output/com/clouway/crm/core/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/input-and-output/com/clouway/crm/core/TransferObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/input-and-output/com/clouway/crm/core/TransferObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output" beforeDir="false" afterPath="$PROJECT_DIR$/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/clouway/crm/core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/clouway/crm/core/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,25 +17,15 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/clouway/crm/core/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="352">
+              <caret line="115" column="8" lean-forward="true" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#161#183#0" />
+                <element signature="e#816#858#0" />
+                <element signature="e#1486#1509#0" />
+                <element signature="e#2004#2022#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="output" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="input" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="8" selection-start-column="8" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -237,7 +223,7 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -342,10 +328,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/clouway/crm/core/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="352">
+          <caret line="115" column="8" lean-forward="true" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#161#183#0" />
+            <element signature="e#816#858#0" />
+            <element signature="e#1486#1509#0" />
+            <element signature="e#2004#2022#0" />
           </folding>
         </state>
       </provider>

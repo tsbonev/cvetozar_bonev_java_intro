@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //region ConsoleReader
         /*
         ConsoleReader reader = new ConsoleReader();
 
@@ -33,9 +34,9 @@ public class Main {
         StreamReverser reverser1 = new StreamReverser("test1");
         reverser1.reverse();
         */
+        //endregion
 
-
-        //Random Access File implementation
+        //region Random Access File implementation
         /*
         try(RandomAccessFile fileIn = new RandomAccessFile("input", "r");
         OutputStream fileOut = new FileOutputStream("output")){
@@ -56,11 +57,13 @@ public class Main {
             System.out.println(e.getMessage());
         }
         */
+        //endregion
 
-
+        //region TransferObject
+        /*
         TransferObject transferer = new TransferObject();
 
-        /*
+
         try (InputStream in = new FileInputStream("input");
              OutputStream out = new FileOutputStream("output")){
 
@@ -74,9 +77,9 @@ public class Main {
             System.out.println(e.getMessage());
         }
         */
+        //endregion
 
-
-
+        //region DataClass
         /*
         DataClass dataClass = new DataClass();
 
@@ -109,7 +112,7 @@ public class Main {
         System.out.println();
         browser.listContent("home/fakedir");
         */
-
-
+        //endregion
+        
     }
 }
