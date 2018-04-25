@@ -1,6 +1,7 @@
 package com.clouway.crm.core;
 
 import java.io.*;
+import java.nio.ByteBuffer;
 
 public class Main {
 
@@ -33,9 +34,33 @@ public class Main {
         reverser1.reverse();
         */
 
+
+        //Random Access File implementation
         /*
+        try(RandomAccessFile fileIn = new RandomAccessFile("input", "r");
+        OutputStream fileOut = new FileOutputStream("output")){
+
+            int size = 4;
+            int offset = 2;
+            byte[] buff = new byte[size];
+
+            fileIn.seek(offset);
+
+            fileIn.read(buff);
+
+            fileOut.write(buff);
+
+        }catch (FileNotFoundException e){
+            System.out.println("No such file!");
+        }catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+        */
+
+
         TransferObject transferer = new TransferObject();
 
+        /*
         try (InputStream in = new FileInputStream("input");
              OutputStream out = new FileOutputStream("output")){
 
