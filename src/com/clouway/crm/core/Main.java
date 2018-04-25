@@ -39,7 +39,7 @@ public class Main {
         try (InputStream in = new FileInputStream("input");
              OutputStream out = new FileOutputStream("output")){
 
-            transferer.transfer(in, out, 2, 4);
+            transferer.transfer(in, out, 1, 4);
 
         }
         catch (FileNotFoundException e){
@@ -49,6 +49,7 @@ public class Main {
             System.out.println(e.getMessage());
         }
         */
+
 
 
         /*
@@ -74,6 +75,7 @@ public class Main {
         }
         */
 
+        /*
         DirectoryBrowser browser = new DirectoryBrowser();
 
         browser.listContent("input");
@@ -81,7 +83,7 @@ public class Main {
         browser.listContent("/home/clouway/workspaces/idea/input-and-output");
         System.out.println();
         browser.listContent("home/fakedir");
-
+        */
 
 
     }
