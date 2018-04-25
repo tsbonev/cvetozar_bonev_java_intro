@@ -12,6 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
         //region PageBean
+        /*
         ArrayList<Integer> list = new ArrayList<>();
 
 
@@ -62,6 +63,19 @@ public class Main {
             }
 
         }
+        */
+        //endregion
+
+        //region MostCommon
+
+        MostCommon mostCommon = new MostCommon();
+
+        String words1 = "aa cc aa ff gg hh ff";
+        String words2 = "Ники Илиев Вълчев Вевов";
+
+        System.out.println(mostCommon.wordCount(words1));
+
+        System.out.println(mostCommon.letterCount(words2));
 
         //endregion
 
